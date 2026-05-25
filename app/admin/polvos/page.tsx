@@ -11,9 +11,7 @@ import {
   X,
 } from "lucide-react";
 
-import { getSupabase} from "@/app/lib/supabase";
-
-const supabase = getSupabase();
+import { supabase } from "@/app/lib/supabase";
 
 /* ---------------- TYPES ---------------- */
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { getSupabase } from "@/app/lib/supabase";
+import { supabase } from "@/app/lib/supabase";
 import Image from "next/image";
 import { use, useEffect, useMemo, useState } from "react";
 import {
@@ -14,7 +14,6 @@ import {
   Zap,
 } from "lucide-react";
 
-const supabase = getSupabase();   
 
 type Caracteristica = {
   id: number;
@@ -351,7 +350,7 @@ cerrarModal();
         {productos.length === 0 && (
   <div className="text-center py-20">
     <h2 className="text-3xl font-bold text-gray-500">
-      Cargando Productos...
+      Cargando Productos
     </h2>
   </div>
 )}

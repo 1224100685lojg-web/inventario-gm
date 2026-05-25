@@ -2,13 +2,10 @@
 
 import { useEffect, useState } from "react";
 
-import { getSupabase } from "@/app/lib/supabase";
+import { supabase } from "@/app/lib/supabase";
+
 import SearchBar from "@/app/components/SearchBar";
 import ProductTable from "@/app/components/ProductTable";
-
-
-
-const supabase = getSupabase();
 
 type Producto = {
   id: number;
