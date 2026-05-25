@@ -3,7 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_KEY!
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
 );
 
 export async function PATCH(
@@ -21,27 +21,27 @@ export async function PATCH(
 
     const { data, error } = await supabase
       .from("maquinaria")
-        .update({
+      .update({
         precio_dia: body.precio_dia
-            ? Number(body.precio_dia)
-            : null,
+          ? Number(body.precio_dia)
+          : null,
 
         precio_semana: body.precio_semana
-            ? Number(body.precio_semana)
-            : null,
+          ? Number(body.precio_semana)
+          : null,
 
         precio_quincena: body.precio_quincena
-            ? Number(body.precio_quincena)
-            : null,
+          ? Number(body.precio_quincena)
+          : null,
 
         precio_mes: body.precio_mes
-            ? Number(body.precio_mes)
-            : null,
+          ? Number(body.precio_mes)
+          : null,
 
         precio_arrastre: body.precio_arrastre
-            ? Number(body.precio_arrastre)
-            : null,
-        })
+          ? Number(body.precio_arrastre)
+          : null,
+      })
       .eq("id", id)
       .select();
 
