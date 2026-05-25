@@ -2,10 +2,14 @@
 
 import { useState } from "react";
 
-import { supabase } from "@/app/lib/supabase";
+import { getSupabase } from "@/app/lib/supabase";
+
+
 
 import StockBadge from "./StockBadge";
 
+
+const supabase = getSupabase();
 type Producto = {
   id: number;
   nombre: string;

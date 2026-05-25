@@ -10,7 +10,9 @@ import {
   Minus,
   Trash2,
 } from "lucide-react";
-import { supabase } from "@/app/lib/supabase";
+import { getSupabase } from "@/app/lib/supabase";
+
+const supabase = getSupabase();
 
 /* ---------------- TYPES ---------------- */
 

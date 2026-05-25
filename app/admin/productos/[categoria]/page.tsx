@@ -1,6 +1,6 @@
 "use client";
 
-import { supabase } from "@/app/lib/supabase";
+import { getSupabase } from "@/app/lib/supabase";
 import Image from "next/image";
 import { use, useEffect, useMemo, useState } from "react";
 import {
@@ -14,6 +14,7 @@ import {
   Zap,
 } from "lucide-react";
 
+const supabase = getSupabase();   
 
 type Caracteristica = {
   id: number;

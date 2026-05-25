@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/app/lib/supabase";
+import { getSupabase } from "@/app/lib/supabase";
 
 type Props = {
   open: boolean;
   onClose: () => void;
   onCreated: () => void;
 };
+
+const supabase = getSupabase();
 
 export default function NewProductModal({
   open,
